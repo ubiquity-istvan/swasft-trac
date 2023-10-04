@@ -2,11 +2,13 @@
 /* Public */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: white;
+  background: green;
 }
+
 .trac-embed {
   max-width: 1000px;
 }
+
 .section {
   display: flex;
   flex-direction: column;
@@ -38,8 +40,6 @@ nav {
   border-radius: 5px;
   border-bottom: none;
   border: 1px solid rgba(0, 0, 0, 0.108);
-  -webkit-box-shadow: 2px 6px 28px 0px rgba(0, 0, 0, 0.032);
-  -moz-box-shadow: 2px 6px 28px 0px rgba(0, 0, 0, 0.24);
   box-shadow: 2px 6px 28px 0px rgba(0, 0, 0, 0.032);
   font-weight: 300;
 }
@@ -50,10 +50,7 @@ nav {
   color: white;
 }
 
-#hj-content
-  #hj-select-sector
-  .hj-css-sector-default-buttons
-  span.hj-css-icon-text {
+#hj-content #hj-select-sector .hj-css-sector-default-buttons span.hj-css-icon-text {
   font-weight: unset;
 }
 
@@ -65,12 +62,15 @@ nav {
   display: flex;
   flex-direction: column;
 }
+
 #hj-select-sector h2 {
   order: 1;
 }
+
 #hj-select-sector .clearfix {
   order: 3;
 }
+
 #hj-select-sector .hj-job-search {
   order: 2;
 }
@@ -130,9 +130,10 @@ ul.clearfix li {
 }
 
 .hj-css-sector-icon .hj-css-icon img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hj-css-sector-icon .hj-css-icon-text {
   margin: 20px 0 !important;
-}
+}/*# sourceMappingURL=style.css.map */
