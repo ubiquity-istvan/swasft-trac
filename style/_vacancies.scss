@@ -1,0 +1,11 @@
+// Vacancies
+.hj-job-list {
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.hj-job {
+  border: none !important;
+}
