@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Trac testing</title>
+  </head>
+  <body>
+    <section class="section">
+      <nav>
+        <a href="/">Logo</a>
+        <ul class="nav-items">
+          <li>Nav item</li>
+          <li>Nav item</li>
+          <li>Nav item</li>
+          <li>Nav item</li>
+        </ul>
+      </nav>
+    </section>
+    <section class="section">
+      <div class="trac-embed">
+        <!-- trac.jobs JavaScript -->
+        <div aria-live="polite">
+          <script
+            id="TracFeed"
+            async
+            src="https://feeds.trac.jobs/js/v16/EmbeddedJobsBoard.js"
+            data-JobsBoardID="10000"
+            crossorigin="anonymous"
+            integrity="sha384-QGdVOyT3PYStoaRa4DLJwxKnT6qd/L07qOnWRa/cRg5ROxBvs3XLckvrhrXr+lId"
+            data-SearchBox="true"
+            data-IncludeCSS="true"
+          ></script>
+        </div>
+        <!-- End trac.jobs JavaScript -->
+      </div>
+    </section>
+  </body>
+</html>
