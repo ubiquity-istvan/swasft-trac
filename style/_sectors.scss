@@ -1,34 +1,3 @@
-/* Local dev helpers Final */
-/* Public */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.trac-embed {
-  max-width: 1000px;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.trac-embed {
-  color: #2c6349;
-}
-
-.hj-job-list ol {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-
-.hj-job {
-  border: none !important;
-}
-
 /* Trac styles 2*/
 #hj-jobs-board-content #hj-content #hj-select-sector .hj-css-sector-icon {
   background-color: white;
@@ -36,7 +5,10 @@ body {
   font-weight: 300;
 }
 
-#hj-content #hj-select-sector .hj-css-sector-default-buttons span.hj-css-icon-text {
+#hj-content
+  #hj-select-sector
+  .hj-css-sector-default-buttons
+  span.hj-css-icon-text {
   font-weight: unset;
 }
 
@@ -48,15 +20,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 #hj-select-sector h2 {
   order: 1;
 }
-
 #hj-select-sector .clearfix {
   order: 3;
 }
-
 #hj-select-sector .hj-job-search {
   order: 2;
 }
@@ -67,6 +36,24 @@ div[style="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size
 }
 
 /* Add breakpoints for responsibility */
+// Grid
+ul.clearfix {
+  // grid-column-gap: 40px;
+  // grid-row-gap: 80px;
+  // grid-template-rows: auto auto;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-auto-columns: 1fr;
+  // flex-wrap: wrap;
+  // justify-content: space-around;
+  // display: grid;
+  // max-width: none !important;
+  // display: flex;
+}
+
+// .clearfix li a {
+//   height: 100%;
+// }
+
 /* Search bar */
 #hj-select-sector .form-widget {
   display: flex;
@@ -90,47 +77,59 @@ div[style="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size
 }
 
 .hj-css-sector-icon .hj-css-icon img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .hj-css-sector-icon .hj-css-icon-text {
   margin: 20px 0 !important;
 }
 
+// Sector grid
 #hj-select-sector ul.clearfix {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
+
   padding: 0;
-}
-#hj-select-sector ul.clearfix li {
-  list-style: none;
-  align-self: stretch;
-  height: 100%;
-  border-top-right-radius: 100px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #2c6349;
-  text-decoration: none;
-}
-#hj-select-sector ul.clearfix li img {
-  height: 200px;
-  border-top-right-radius: 100px;
-}
-#hj-select-sector ul.clearfix li a {
-  text-decoration: none;
-}
-#hj-select-sector ul.clearfix li a .hj-css-sector-icon div:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#hj-select-sector ul.clearfix li a .hj-css-sector-icon div:nth-child(2) h3 {
-  color: #2c6349 !important;
+
+  //   List item
+  li {
+    list-style: none;
+    align-self: stretch;
+    height: 100%;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    // border: 1px solid rgba(0, 0, 0, 0.33);
+    border: 1px solid $primary;
+    text-decoration: none;
+
+    // Image
+    img {
+      height: 200px;
+      border-top-right-radius: 100px;
+      // border-top-left-radius: 10px;
+      // border-bottom-left-radius: 10px;
+      // border-bottom-right-radius: 10px;
+    }
+
+    // Link
+    a {
+      text-decoration: none;
+      //   Text block
+      .hj-css-sector-icon div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          color: $text !important;
+        }
+      }
+    }
+  }
 }
 
 #hj-feed-wrapper #hj-content #hj-select-sector .hj-css-sector-icon,
@@ -138,9 +137,8 @@ div[style="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size
   background-color: white;
   color: white;
 }
-
 #hj-feed-wrapper #hj-content #hj-select-sector .hj-css-sector-icon:hover,
 #hj-feed-wrapper #hj-content #hj-select-sector .hj-css-sector-icon:hover h3 {
-  background-color: #2c6349 !important;
+  background-color: $primary !important;
   color: white !important;
-}/*# sourceMappingURL=style.css.map */
+}
