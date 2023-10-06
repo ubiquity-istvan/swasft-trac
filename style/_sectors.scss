@@ -1,7 +1,26 @@
 // Sectors page
 #hj-feed-content {
-  nav {
+  // Account menu
+  nav#hj-menu {
     display: none;
+    padding: 20px;
+    // background-image: $light-gradient;
+    background: transparent;
+    // border-radius: 10px;
+    color: white !important;
+    // margin: 20px 0;
+    // border: 1px solid lightgray;
+
+    ul {
+      list-style: none;
+      li {
+        text-align: center;
+        a {
+          background-color: inherit !important;
+          color: $text !important;
+        }
+      }
+    }
   }
 }
 
@@ -25,12 +44,12 @@
     // display: none;
     margin: 0 !important;
     border-radius: 10px;
-    background-color: $primary !important;
-    color: white;
+    // background-color: $primary !important;
+    background-image: $light-gradient;
 
     a {
       // text-decoration: none !important;
-      color: white;
+      color: $text;
     }
   }
 
@@ -53,9 +72,10 @@
       transition: all 0.2s;
 
       &:hover {
-        -webkit-box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
-        -moz-box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
-        box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
+        // -webkit-box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
+        // -moz-box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
+        // box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
+        box-shadow: $shadow;
       }
 
       a {
@@ -69,7 +89,8 @@
 
         &:hover {
           background: $text !important;
-          background-color: $text !important;
+          // background-color: $text !important;
+          background-image: $primary-gradient;
           color: white !important;
         }
 
@@ -140,7 +161,8 @@
           transition: all 0.2s;
 
           &:hover {
-            background-color: $primary !important;
+            // background-color: $primary !important;
+            background-image: $primary-gradient;
             cursor: pointer;
           }
         }

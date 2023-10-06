@@ -16,6 +16,12 @@ $primary: #2c6349;
 $primary-33: #2c634933;
 $text: rgb(29, 66, 48);
 $primary-gradient: linear-gradient(71deg, #1d4230 0%, #4d7c66 100%);
+$light-gradient: linear-gradient(
+  225deg,
+  rgb(210, 226, 218),
+  rgb(255, 255, 255)
+);
+$shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
 
 .trac-embed {
   color: $text;
