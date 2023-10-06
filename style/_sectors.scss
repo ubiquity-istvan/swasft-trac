@@ -1,144 +1,153 @@
-/* Trac styles 2*/
-#hj-jobs-board-content #hj-content #hj-select-sector .hj-css-sector-icon {
-  background-color: white;
-  border-radius: 5px;
-  font-weight: 300;
+// Sectors page
+#hj-feed-content {
+  nav {
+    display: none;
+  }
 }
 
-#hj-content
-  #hj-select-sector
-  .hj-css-sector-default-buttons
-  span.hj-css-icon-text {
-  font-weight: unset;
-}
-
-#hj-menu {
-  display: none !important;
+#hj-loading-section {
+  display: none;
 }
 
 #hj-select-sector {
   display: flex;
   flex-direction: column;
-}
-#hj-select-sector h2 {
-  order: 1;
-}
-#hj-select-sector .clearfix {
-  order: 3;
-}
-#hj-select-sector .hj-job-search {
-  order: 2;
-}
+  gap: 40px;
 
-/* Removing yellow COVID sign */
-div[style="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size: 1.2rem; line-height: 1; text-align: center; background-color: yellow;"] {
-  display: none;
-}
+  // Heading
+  h2:nth-child(1) {
+    // display: none;
+    text-align: center;
+  }
 
-/* Add breakpoints for responsibility */
-// Grid
-ul.clearfix {
-  // grid-column-gap: 40px;
-  // grid-row-gap: 80px;
-  // grid-template-rows: auto auto;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-auto-columns: 1fr;
-  // flex-wrap: wrap;
-  // justify-content: space-around;
-  // display: grid;
-  // max-width: none !important;
-  // display: flex;
-}
+  // Covid banner
+  div[style*="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size: 1.2rem; line-height: 1; text-align: center; background-color: yellow;"] {
+    // display: none;
+    margin: 0 !important;
+    border-radius: 10px;
+    background-color: $primary !important;
+    color: white;
 
-// .clearfix li a {
-//   height: 100%;
-// }
-
-/* Search bar */
-#hj-select-sector .form-widget {
-  display: flex;
-  gap: 20px;
-}
-
-.hj-css-sector-icon {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  background-color: green;
-}
-
-.hj-css-sector-icon div:nth-of-type(2) {
-  width: 100% !important;
-  height: 100%;
-}
-
-.hj-css-sector-icon .hj-css-icon {
-  width: 100% !important;
-}
-
-.hj-css-sector-icon .hj-css-icon img {
-  object-fit: cover;
-}
-
-.hj-css-sector-icon .hj-css-icon-text {
-  margin: 20px 0 !important;
-}
-
-// Sector grid
-#hj-select-sector ul.clearfix {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 60px;
-
-  padding: 0;
-
-  //   List item
-  li {
-    list-style: none;
-    align-self: stretch;
-    height: 100%;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
-    // border: 1px solid rgba(0, 0, 0, 0.33);
-    border: 1px solid $primary;
-    text-decoration: none;
-
-    // Image
-    img {
-      height: 200px;
-      border-top-right-radius: 100px;
-      // border-top-left-radius: 10px;
-      // border-bottom-left-radius: 10px;
-      // border-bottom-right-radius: 10px;
-    }
-
-    // Link
     a {
-      text-decoration: none;
-      //   Text block
-      .hj-css-sector-icon div:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      // text-decoration: none !important;
+      color: white;
+    }
+  }
+
+  // Cards
+  ul.clearfix {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 0;
+
+    li {
+      list-style: none;
+      width: 300px;
+      border-top-right-radius: 100px;
+      overflow: hidden;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      transition: all 0.2s;
+
+      &:hover {
+        -webkit-box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
+        -moz-box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
+        box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
+      }
+
+      a {
+        text-decoration: none !important;
+        color: $text !important;
+      }
+
+      .hj-css-sector-icon {
+        background-color: transparent !important;
+        transition: all 0.2s;
+
+        &:hover {
+          background: $text !important;
+          background-color: $text !important;
+          color: white !important;
+        }
+
+        .hj-css-icon {
+          height: 300px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-right-radius: 100px;
+          }
+        }
+
+        div:nth-child(2) {
+          padding: 20px;
+          text-align: center;
+        }
+
         h3 {
-          color: $text !important;
+          margin: 0;
+          color: inherit !important;
         }
       }
     }
   }
 }
-
-#hj-feed-wrapper #hj-content #hj-select-sector .hj-css-sector-icon,
-#hj-feed-wrapper #hj-content #hj-select-sector .hj-css-sector-icon h3 {
-  background-color: white;
-  color: white;
+// Sector icon hover
+#hj-select-sector {
+  .hj-css-sector-icon:hover {
+    h3 {
+      background-color: inherit !important;
+      color: inherit !important;
+    }
+  }
 }
-#hj-feed-wrapper #hj-content #hj-select-sector .hj-css-sector-icon:hover,
-#hj-feed-wrapper #hj-content #hj-select-sector .hj-css-sector-icon:hover h3 {
-  background-color: $primary !important;
-  color: white !important;
+
+// Search box
+.hj-job-search {
+  #JobSearch_default {
+    border: none;
+    padding: none;
+    .form-widget-container {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      .form-widget {
+        display: flex !important;
+        flex-direction: column;
+        gap: 20px;
+
+        input {
+          padding: 5px;
+        }
+
+        .form-control {
+          color: $text;
+        }
+
+        .hj-button {
+          border-radius: 5px;
+          border: none;
+          padding: 12px 24px;
+          background-color: $text !important;
+          color: white !important;
+          font-weight: bolder;
+          transition: all 0.2s;
+
+          &:hover {
+            background-color: $primary !important;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .endwidgets {
+    display: none;
+  }
 }
