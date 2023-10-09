@@ -1,3 +1,34 @@
+// Breadcrumbs
+#hj-main-section {
+  .breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    background: $light-gradient !important;
+    padding: 20px;
+    border: 1px solid $text;
+    border-radius: 10px;
+
+    a {
+      color: $text;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    li.current {
+      font-weight: bold;
+    }
+  }
+}
+
+// Alert
+.alert.alert-warning {
+}
+
 // Pagination
 nav.recordset-pager {
   ul.pagination {
@@ -5,40 +36,49 @@ nav.recordset-pager {
     display: flex;
     // flex-direction: column;
     justify-content: start;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 0;
     width: 100%;
 
     li {
-      a {
-        color: $text !important;
-        text-decoration: none;
-        padding: 5px 10px;
-        border-radius: 50px;
-
-        &:hover {
-          text-decoration: underline;
-        }
+      .ic-pager-previous-set,
+      .ic-pager-next-set {
+        display: none;
       }
     }
+    a {
+      color: $text !important;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 50px;
 
-    li.active {
-      a {
-        background-color: $text;
-        color: white !important;
+      &:hover {
+        text-decoration: underline;
       }
+    }
+  }
+
+  li.active {
+    a {
+      background-color: $text;
+      color: white !important;
     }
   }
 }
 
 // Separator
-#hj-content .pagination .page-item + .page-item::before {
-  content: "|";
-  // padding: 0 0.5em;
-}
+// #hj-content .pagination .page-item + .page-item::before {
+//   content: "|";
+//   // padding: 0 0.5em;
+// }
 
 // Vacancies
-.hj-job-list {
+#hj-job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
   ol {
     display: flex;
     flex-direction: column;
@@ -57,6 +97,74 @@ nav.recordset-pager {
       border-radius: 10px;
       border: 1px solid $text !important;
       transition: all 0.2s;
+      color: $text;
+
+      &:hover {
+        background: $primary-gradient;
+        color: white;
+        .hj-job-details {
+          border-color: white;
+        }
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-decoration: none;
+        color: inherit;
+
+        .hj-job-list-entry {
+          display: flex;
+          // flex-direction: column;
+          gap: 20px;
+          justify-content: space-between;
+
+          .hj-jobtitle {
+            font-size: x-large;
+            font-weight: bold;
+          }
+
+          .hj-grade {
+            font-weight: bold;
+          }
+        }
+        .hj-job-details {
+          // display: flex;
+          // // flex-direction: column;
+          // gap: 40px;
+          // justify-content: space-between;
+          // width: 100%;
+          // flex-wrap: wrap;
+
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          position: relative;
+          gap: 10px;
+          border-top: 1px solid $primary;
+          padding: 30px 0;
+
+          // Grid items
+          .hj-eligibility-note.hj-warning,
+          .hj-job-detail {
+            // border-left: 1.5px solid $primary;
+            // padding-left: 20px;
+          }
+          .hj-eligibility-note.hj-warning {
+            font-weight: bold;
+          }
+          .hj-job-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            max-width: 200px;
+
+            .hj-field-caption {
+              font-weight: bold;
+            }
+          }
+        }
+      }
 
       &:hover {
         box-shadow: $shadow;

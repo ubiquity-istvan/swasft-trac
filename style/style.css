@@ -83,6 +83,7 @@ body {
 #hj-select-sector ul.clearfix li .hj-css-sector-icon {
   background-color: transparent !important;
   transition: all 0.2s;
+  height: 100% !important;
 }
 #hj-select-sector ul.clearfix li .hj-css-sector-icon:hover {
   background: rgb(29, 66, 48) !important;
@@ -151,47 +152,121 @@ body {
   display: none;
 }
 
+#hj-main-section .breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  background: linear-gradient(225deg, rgb(210, 226, 218), rgb(255, 255, 255)) !important;
+  padding: 20px;
+  border: 1px solid rgb(29, 66, 48);
+  border-radius: 10px;
+}
+#hj-main-section .breadcrumbs a {
+  color: rgb(29, 66, 48);
+  text-decoration: none;
+}
+#hj-main-section .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+#hj-main-section .breadcrumbs li.current {
+  font-weight: bold;
+}
+
 nav.recordset-pager ul.pagination {
   list-style: none;
   display: flex;
   justify-content: start;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 0;
   width: 100%;
 }
-nav.recordset-pager ul.pagination li a {
+nav.recordset-pager ul.pagination li .ic-pager-previous-set,
+nav.recordset-pager ul.pagination li .ic-pager-next-set {
+  display: none;
+}
+nav.recordset-pager ul.pagination a {
   color: rgb(29, 66, 48) !important;
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 50px;
 }
-nav.recordset-pager ul.pagination li a:hover {
+nav.recordset-pager ul.pagination a:hover {
   text-decoration: underline;
 }
-nav.recordset-pager ul.pagination li.active a {
+nav.recordset-pager li.active a {
   background-color: rgb(29, 66, 48);
   color: white !important;
 }
 
-#hj-content .pagination .page-item + .page-item::before {
-  content: "|";
+#hj-job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.hj-job-list ol {
+#hj-job-list ol {
   display: flex;
   flex-direction: column;
   gap: 50px;
   list-style: none;
   padding: 0;
 }
-.hj-job-list ol li.hj-job {
+#hj-job-list ol li.hj-job {
   background-image: linear-gradient(225deg, rgb(210, 226, 218), rgb(255, 255, 255));
   padding: 20px;
   border-radius: 10px;
   border: 1px solid rgb(29, 66, 48) !important;
   transition: all 0.2s;
+  color: rgb(29, 66, 48);
 }
-.hj-job-list ol li.hj-job:hover {
+#hj-job-list ol li.hj-job:hover {
+  background: linear-gradient(71deg, #1d4230 0%, #4d7c66 100%);
+  color: white;
+}
+#hj-job-list ol li.hj-job:hover .hj-job-details {
+  border-color: white;
+}
+#hj-job-list ol li.hj-job a {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-decoration: none;
+  color: inherit;
+}
+#hj-job-list ol li.hj-job a .hj-job-list-entry {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+#hj-job-list ol li.hj-job a .hj-job-list-entry .hj-jobtitle {
+  font-size: x-large;
+  font-weight: bold;
+}
+#hj-job-list ol li.hj-job a .hj-job-list-entry .hj-grade {
+  font-weight: bold;
+}
+#hj-job-list ol li.hj-job a .hj-job-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  gap: 10px;
+  border-top: 1px solid #2c6349;
+  padding: 30px 0;
+}
+#hj-job-list ol li.hj-job a .hj-job-details .hj-eligibility-note.hj-warning {
+  font-weight: bold;
+}
+#hj-job-list ol li.hj-job a .hj-job-details .hj-job-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 200px;
+}
+#hj-job-list ol li.hj-job a .hj-job-details .hj-job-detail .hj-field-caption {
+  font-weight: bold;
+}
+#hj-job-list ol li.hj-job:hover {
   box-shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
 }
 
