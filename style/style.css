@@ -2,6 +2,7 @@
 /* Public */
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: rgb(29, 66, 48);
 }
 
 .trac-embed {
@@ -17,6 +18,16 @@ body {
 
 .trac-embed {
   color: rgb(29, 66, 48);
+}
+
+.hj-grade {
+  font-weight: normal;
+  background-color: #2c6349;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 #hj-feed-content nav#hj-menu {
@@ -224,6 +235,12 @@ nav.recordset-pager li.active a {
   background: linear-gradient(71deg, #1d4230 0%, #4d7c66 100%);
   color: white;
 }
+#hj-job-list ol li.hj-job:hover .hj-grade {
+  background-color: white !important;
+  color: rgb(29, 66, 48) !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 #hj-job-list ol li.hj-job:hover .hj-job-details {
   border-color: white;
 }
@@ -237,13 +254,11 @@ nav.recordset-pager li.active a {
 #hj-job-list ol li.hj-job a .hj-job-list-entry {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: start;
+  align-items: center;
 }
 #hj-job-list ol li.hj-job a .hj-job-list-entry .hj-jobtitle {
   font-size: x-large;
-  font-weight: bold;
-}
-#hj-job-list ol li.hj-job a .hj-job-list-entry .hj-grade {
   font-weight: bold;
 }
 #hj-job-list ol li.hj-job a .hj-job-details {
@@ -272,4 +287,115 @@ nav.recordset-pager li.active a {
 
 .hj-job {
   border: none !important;
+}
+
+#hj-job {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#hj-job .hj-job-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#hj-job .hj-job-title h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#hj-job #hj-job-summary .row {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+#hj-job #hj-job-summary .row .front-end-job-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+#hj-job #hj-job-summary .row .front-end-job-summary .caption {
+  margin: 0 !important;
+  font-weight: bold;
+}
+#hj-job #hj-job-summary .row .front-end-job-summary .caption::after {
+  content: ":";
+}
+#hj-job #hj-job-summary .row .front-end-job-summary .field-value {
+  margin: 0 0 10px 0;
+}
+#hj-job #hj-job-summary .row .front-end-job-summary .field-value ul {
+  padding-left: 20px;
+}
+#hj-job #hj-job-description .hj-job-title {
+  display: block !important;
+}
+#hj-job #hj-enquiry-html {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  margin-top: 20px;
+}
+#hj-job #hj-enquiry-html .hj-box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+#hj-job #hj-enquiry-html .hj-box-content dt {
+  margin: 0 !important;
+  font-weight: bold;
+}
+#hj-job #hj-enquiry-html .hj-box-content dt::after {
+  content: ":";
+}
+#hj-job #hj-enquiry-html .hj-box-content dd {
+  margin: 0 0 10px 0;
+}
+
+.hj-employer-icons {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  align-items: center;
+}
+.hj-employer-icons h3 {
+  width: 100%;
+}
+.hj-employer-icons a {
+  width: 100px;
+}
+.hj-employer-icons a img {
+  width: 100%;
+}
+
+#hj-vacancy-docs {
+  margin-bottom: 40px;
+}
+#hj-vacancy-docs .hj-box-content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hj-apply-online.hj-button.hj-primary {
+  padding: 12px 24px;
+  border-radius: 5px;
+  background: #2c6349 !important;
+  color: white !important;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+.hj-apply-online.hj-button.hj-primary:hover {
+  background: linear-gradient(225deg, rgb(210, 226, 218), rgb(255, 255, 255)) !important;
+  color: rgb(29, 66, 48) !important;
+  border: 1px solid rgb(29, 66, 48);
 }/*# sourceMappingURL=style.css.map */

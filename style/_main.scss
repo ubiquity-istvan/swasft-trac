@@ -1,17 +1,6 @@
 /* Local dev helpers Final */
 /* Public */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.trac-embed {
-  max-width: 1000px;
-}
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 $primary: #2c6349;
 $primary-33: #2c634933;
 $text: rgb(29, 66, 48);
@@ -23,6 +12,30 @@ $light-gradient: linear-gradient(
 );
 $shadow: -4px 4px 19px -7px rgba(0, 0, 0, 0.27);
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text;
+}
+.trac-embed {
+  max-width: 1000px;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .trac-embed {
   color: $text;
+}
+
+.hj-grade {
+  font-weight: normal;
+  background-color: $primary;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }

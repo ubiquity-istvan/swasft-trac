@@ -102,6 +102,14 @@ nav.recordset-pager {
       &:hover {
         background: $primary-gradient;
         color: white;
+
+        .hj-grade {
+          // font-weight: bold;
+          background-color: white !important;
+          color: $text !important;
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
         .hj-job-details {
           border-color: white;
         }
@@ -118,14 +126,16 @@ nav.recordset-pager {
           display: flex;
           // flex-direction: column;
           gap: 20px;
-          justify-content: space-between;
+          justify-content: start;
+          align-items: center;
+
+          // To remove covid-19 jobs
+          // img {
+          //   display: none;
+          // }
 
           .hj-jobtitle {
             font-size: x-large;
-            font-weight: bold;
-          }
-
-          .hj-grade {
             font-weight: bold;
           }
         }

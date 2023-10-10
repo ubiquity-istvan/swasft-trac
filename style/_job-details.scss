@@ -1,0 +1,136 @@
+#hj-job {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  //   Job title
+  .hj-job-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  //   Job summary
+  #hj-job-summary {
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 60px;
+      flex-wrap: wrap;
+
+      .front-end-job-summary {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+
+        .caption {
+          margin: 0 !important;
+          font-weight: bold;
+
+          &::after {
+            content: ":";
+          }
+        }
+        .field-value {
+          margin: 0 0 10px 0;
+
+          ul {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  #hj-job-description {
+    .hj-job-title {
+      display: block !important;
+    }
+  }
+
+  //   Job body
+  #hj-enquiry-html {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    margin-top: 20px;
+
+    .hj-box-content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+
+      dt {
+        margin: 0 !important;
+        font-weight: bold;
+
+        &::after {
+          content: ":";
+        }
+      }
+      dd {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+// Logos / icons
+.hj-employer-icons {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  align-items: center;
+
+  h3 {
+    width: 100%;
+  }
+
+  a {
+    width: 100px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Documents
+#hj-vacancy-docs {
+  margin-bottom: 40px;
+  .hj-box-content {
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+// Button
+.hj-apply-online.hj-button.hj-primary {
+  padding: 12px 24px;
+  border-radius: 5px;
+  background: $primary !important;
+  color: white !important;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: $light-gradient !important;
+    color: $text !important;
+    border: 1px solid $text;
+  }
+}
