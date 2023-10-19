@@ -34,14 +34,6 @@ body {
   display: none !important;
 }
 
-#hj-feed-wrapper {
-  display: flex;
-  justify-content: center;
-}
-#hj-feed-wrapper #hj-jobs-board-content {
-  max-width: 1000px;
-}
-
 #hj-feed-content nav#hj-menu {
   display: none;
   padding: 20px;
