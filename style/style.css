@@ -30,6 +30,10 @@ body {
   justify-content: center;
 }
 
+#hj-account-menu {
+  display: none !important;
+}
+
 #hj-feed-content nav#hj-menu {
   display: none;
   padding: 20px;
