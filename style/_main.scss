@@ -19,9 +19,9 @@ body {
 .trac-embed {
   // max-width: 1000px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 }
 .section {
   display: flex;
@@ -49,5 +49,9 @@ body {
 }
 
 #hj-feed-wrapper {
-  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  #hj-jobs-board-content {
+    max-width: 1000px;
+  }
 }
