@@ -1,7 +1,6 @@
 /* Local dev helpers Final */
 /* Public */
 body {
-  font-family: Arial, Helvetica, sans-serif;
   color: rgb(29, 66, 48);
 }
 
@@ -71,12 +70,19 @@ body {
 #hj-select-sector h2:nth-child(1) {
   text-align: center;
 }
-#hj-select-sector div[style*="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size: 1.2rem; line-height: 1; text-align: center; background-color: yellow;"] {
+#hj-select-sector
+  div[style*="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size: 1.2rem; line-height: 1; text-align: center; background-color: yellow;"] {
   margin: 0 !important;
   border-radius: 10px;
-  background-image: linear-gradient(225deg, rgb(210, 226, 218), rgb(255, 255, 255));
+  background-image: linear-gradient(
+    225deg,
+    rgb(210, 226, 218),
+    rgb(255, 255, 255)
+  );
 }
-#hj-select-sector div[style*="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size: 1.2rem; line-height: 1; text-align: center; background-color: yellow;"] a {
+#hj-select-sector
+  div[style*="margin: 1rem; padding: 1.2rem; border: 1px solid lightgrey; font-size: 1.2rem; line-height: 1; text-align: center; background-color: yellow;"]
+  a {
   color: rgb(29, 66, 48);
 }
 #hj-select-sector ul.clearfix {
@@ -119,8 +125,7 @@ body {
 #hj-select-sector ul.clearfix li .hj-css-sector-icon .hj-css-icon img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-right-radius: 100px;
 }
 #hj-select-sector ul.clearfix li .hj-css-sector-icon div:nth-child(2) {
@@ -155,10 +160,18 @@ body {
 .hj-job-search #JobSearch_default .form-widget-container .form-widget input {
   padding: 5px;
 }
-.hj-job-search #JobSearch_default .form-widget-container .form-widget .form-control {
+.hj-job-search
+  #JobSearch_default
+  .form-widget-container
+  .form-widget
+  .form-control {
   color: rgb(29, 66, 48);
 }
-.hj-job-search #JobSearch_default .form-widget-container .form-widget .hj-button {
+.hj-job-search
+  #JobSearch_default
+  .form-widget-container
+  .form-widget
+  .hj-button {
   border-radius: 5px;
   border: none;
   padding: 12px 24px;
@@ -167,7 +180,11 @@ body {
   font-weight: bolder;
   transition: all 0.2s;
 }
-.hj-job-search #JobSearch_default .form-widget-container .form-widget .hj-button:hover {
+.hj-job-search
+  #JobSearch_default
+  .form-widget-container
+  .form-widget
+  .hj-button:hover {
   background-image: linear-gradient(71deg, #1d4230 0%, #4d7c66 100%);
   cursor: pointer;
 }
@@ -183,7 +200,11 @@ body {
   flex-direction: row;
   gap: 20px;
   list-style: none;
-  background: linear-gradient(225deg, rgb(210, 226, 218), rgb(255, 255, 255)) !important;
+  background: linear-gradient(
+    225deg,
+    rgb(210, 226, 218),
+    rgb(255, 255, 255)
+  ) !important;
   padding: 20px;
   border: 1px solid rgb(29, 66, 48);
   border-radius: 10px;
@@ -239,7 +260,11 @@ nav.recordset-pager li.active a {
   padding: 0;
 }
 #hj-job-list ol li.hj-job {
-  background-image: linear-gradient(225deg, rgb(210, 226, 218), rgb(255, 255, 255));
+  background-image: linear-gradient(
+    225deg,
+    rgb(210, 226, 218),
+    rgb(255, 255, 255)
+  );
   padding: 20px;
   border-radius: 10px;
   border: 1px solid rgb(29, 66, 48) !important;
@@ -375,8 +400,7 @@ nav.recordset-pager li.active a {
 .hj-employer-icons {
   display: flex;
   flex-wrap: wrap;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
   align-items: center;
 }
 .hj-employer-icons h3 {
@@ -410,7 +434,13 @@ nav.recordset-pager li.active a {
   border: 1px solid transparent;
 }
 .hj-apply-online.hj-button.hj-primary:hover {
-  background: linear-gradient(225deg, rgb(210, 226, 218), rgb(255, 255, 255)) !important;
+  background: linear-gradient(
+    225deg,
+    rgb(210, 226, 218),
+    rgb(255, 255, 255)
+  ) !important;
   color: rgb(29, 66, 48) !important;
   border: 1px solid rgb(29, 66, 48);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
